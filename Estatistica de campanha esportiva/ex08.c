@@ -3,10 +3,10 @@
 int main () {
     int gols_marcados, gols_recebidos;
     int pontos_finais = 0;
-    int vitoria = 0; empates = 0, derrotas = 0;
+    int vitoria = 0, empates = 0, derrotas = 0;
     int total_gols_marcados = 0, total_gols_recebidos = 0;
     int pontos = 0;
-    int partidas;
+    int partidas = 0;
     float aproveitamento;
 
     // 
@@ -25,10 +25,10 @@ int main () {
         } else if (gols_marcados == gols_recebidos) {
             puts("Empate!!! (+1 ponto)");
             empates++;
-            empates += 1;
+            pontos += 1;
         } else if (gols_marcados < gols_marcados) {
             puts("Derrota!!! (0 pontos!)");
-            derrota++;
+            derrotas++;
         }
 
     total_gols_marcados += gols_marcados;
@@ -47,9 +47,13 @@ int main () {
         aproveitamento = 0;
     }
 
-
-    
-
+    printf("Total de partidas: %d! \n", partidas);
+    printf("Vitorias: %d! \n", vitoria);
+    printf("Empates: %d! \n", empates);
+    printf("Derrotas: %d! \n", derrotas);
+    printf("Pontos acumulados: %d! \n", pontos);
+    printf("Gols marcados: %d, e gols recebidos: %d \n", total_gols_marcados, total_gols_recebidos);
+    printf("Percentual de aproveitamento: %.2f!", aproveitamento);
 
     return 0;
 }
