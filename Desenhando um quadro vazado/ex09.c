@@ -7,29 +7,26 @@ int main() {
         printf("Digite o tamanho do lado do quadrado (entre 2 e 10): ");
         scanf("%d", &tamanho);
 
-        if (lado <2 || lado > 10) {
+        if (tamanho < 2 || tamanho > 10) {
             puts("Valor invalido para o tamanho!");
         }
-    while (lado < 2 || lado > 10);
-    
-    printf("\n"); 
+    } while (tamanho < 2 || tamanho > 10);
 
-    // lado externo com as linhas
+    printf("\n");
+
     for (linha = 1; linha <= tamanho; linha++) {
 
-        // lado interno com as colunas
         for (coluna = 1; coluna <= tamanho; coluna++) {
 
-            if (linha == 1 || linha == tamanho || coluna == 1 || coluna == tamanho) {
-                print("X");
+            if (linha == 1 || linha == tamanho ||
+                coluna == 1 || coluna == tamanho) {
+                printf("X");
             } else {
                 printf(" ");
             }
         }
-    }
 
-    printf("\n");
-
+        printf("\n"); // pula linha ao terminar cada linha do quadrado
     }
 
     return 0;
